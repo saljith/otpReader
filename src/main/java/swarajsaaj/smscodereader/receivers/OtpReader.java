@@ -57,11 +57,11 @@ public class OtpReader extends BroadcastReceiver {
                     String message = currentMessage.getDisplayMessageBody();
                     Log.i(TAG, "senderNum: " + senderNum + " message: " + message);
 
-                    if (!TextUtils.isEmpty(receiverString) && senderNum.contains(receiverString)) { //If message received is from required number.
+                   
                         //If bound a listener interface, callback the overriden method.
                         if (otpListener != null) {
                             otpListener.otpReceived(message);
-                        }
+                     
                     }
                 }
             }
